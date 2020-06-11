@@ -13,7 +13,7 @@ Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 class GetPsql:
     # Connect to databse
     conn = psycopg2.connect(user = "postgres",
-                            password = "kiena198",
+                            password = "s",
                             host = "localhost",
                             port = "5432",
                             database = "bkx")
@@ -43,7 +43,7 @@ class GetPsql:
         return self.cur.fetchall()
 
     def create_route(self, long1, lat1, long2, lat2):
-        conn = psycopg2.connect(database = "bkx", user = "postgres", password = "kiena198", host = "localhost", port = "5432")
+        conn = psycopg2.connect(database = "bkx", user = "postgres", password = "s", host = "localhost", port = "5432")
         sql = "SELECT (route.geom) FROM (SELECT geom FROM pgr_fromAtoB('roads',"+str(long1)+","+str(lat1)+","+str(long2)+","+str(lat2)+") ORDER BY seq) AS route;"
         df = gpd.GeoDataFrame.from_postgis(sql, conn, geom_col='geom' )
         return df
