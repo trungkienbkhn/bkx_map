@@ -79,6 +79,9 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -164,49 +167,6 @@
      <pixmap>../Images/sight.jpg</pixmap>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_2">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>190</y>
-      <width>481</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="currentText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox_3">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>270</y>
-      <width>481</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox_4">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>350</y>
-      <width>161</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox_5">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>430</y>
-      <width>161</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
@@ -250,8 +210,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>270</y>
+      <x>110</x>
+      <y>480</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -271,7 +231,7 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>360</y>
+      <y>280</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -290,8 +250,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>440</y>
+      <x>100</x>
+      <y>380</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -320,10 +280,10 @@
      <string>Back</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="name">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>290</x>
       <y>100</y>
       <width>341</width>
       <height>41</height>
@@ -347,7 +307,7 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>350</y>
+      <y>280</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -363,21 +323,11 @@
      <string>Closing hour</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>350</y>
-      <width>131</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>440</y>
+      <x>500</x>
+      <y>380</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -393,28 +343,388 @@
      <string>Max price</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_6">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>430</y>
-      <width>131</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="filter">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>510</y>
-      <width>89</width>
-      <height>25</height>
+      <x>510</x>
+      <y>470</y>
+      <width>81</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>Filter</string>
     </property>
+   </widget>
+   <widget class="QComboBox" name="address">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>190</y>
+      <width>341</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(238, 238, 236);</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>None</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Đường Trần Đại Nghĩa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Đường Lê Thanh Nghị</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Đường Tạ Quang Bửu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Đường Đại Cồ Việt</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Đường Giải Phóng</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="type">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>470</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(238, 238, 236);</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>None</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>cơm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>phở</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>bún</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>bánh</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>khác</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="open">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>280</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(238, 238, 236);</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>None</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>7h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>9h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>11h</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="close_h">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>280</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(238, 238, 236);</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>None</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>19h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>20h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>21h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>22h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>23h</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>24h</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="min">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>380</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(238, 238, 236);</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>None</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>10K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>20K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>30K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>40K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>50K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>100K</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="max">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>380</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(238, 238, 236);</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>None</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>20K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>30K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>40K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>50K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>100K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>150K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>200K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>250K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>300K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>500K</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
