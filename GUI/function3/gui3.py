@@ -87,7 +87,7 @@ class GetPsql:
 
     def create_route(self, long1, lat1, long2, lat2):
         conn = psycopg2.connect(database = "bkx", user = "postgres", password = "s", host = "localhost", port = "5432")
-        sql = "SELECT (route.geom) FROM (SELECT geom FROM pgr_fromAtoB('roads',"+str(long1)+","+str(lat1)+","+str(long2)+","+str(lat2)+") ORDER BY seq) AS route;"
+        sql = "SELECT (route.geom) FROM (SELECT geom FROM pgr_fromCtoD('roads',"+str(long1)+","+str(lat1)+","+str(long2)+","+str(lat2)+") ORDER BY seq) AS route;"
         df = gpd.GeoDataFrame.from_postgis(sql, conn, geom_col='geom' )
         return df
 
@@ -195,7 +195,6 @@ class Funct3_search(QtWidgets.QMainWindow, Ui_MainWindow2):
         long = location.longitude
         
         df = a.create_route(long,lat,t[0],t[1])
-        print(df['geom'])
         addr_save = "/home/kien/Documents/httt địa lý/shp/"+name+".shp"
         df.to_file(addr_save)
         msg = QtWidgets.QMessageBox()
@@ -230,7 +229,6 @@ class Funct3_result(QtWidgets.QMainWindow, Ui_MainWindow2):
             max = int(max.rstrip("K"))
         a = GetPsql()
         street = street.lstrip("Đường").lstrip(" ")
-        print(street)
         if (street == "None"):
             if (type == "None"):
                 b = a.get_res_1(open_h,close_h,min,max)
@@ -302,7 +300,6 @@ class Funct3_result(QtWidgets.QMainWindow, Ui_MainWindow2):
         long = location.longitude
         
         df = a.create_route(long,lat,t[0],t[1])
-        print(df['geom'])
         addr_save = "/home/kien/Documents/httt địa lý/shp/"+name+".shp"
         df.to_file(addr_save)
         msg = QtWidgets.QMessageBox()

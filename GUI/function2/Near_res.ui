@@ -164,16 +164,6 @@
      <pixmap>../Images/sight.jpg</pixmap>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_3">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>270</y>
-      <width>411</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
@@ -227,7 +217,7 @@
      <string>Top restaurant</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="location">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -249,6 +239,58 @@
     <property name="text">
      <string>Back</string>
     </property>
+   </widget>
+   <widget class="QComboBox" name="type">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>260</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(238, 238, 236);</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>None</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>cơm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>phở</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>bún</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>bánh</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>khác</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
